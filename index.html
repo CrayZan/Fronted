@@ -1,12 +1,23 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel Admin - Hostal del Milagro</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Panel de Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Panel de Administración</h1>
+        <p id="estado">Estado: Conectando con el servidor...</p>
+        
+        <div class="tarjeta">
+            <button id="botonCargar">Actualizar Datos</button>
+            <div id="datos">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
