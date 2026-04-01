@@ -1,222 +1,90 @@
-/* --- VARIABLES DE COLOR OFICIALES DE KIMI --- */
+/* --- PALETA DE COLORES EXTRAÍDA DE TU WEB --- */
 :root {
-    --kimi-bg: #f7f8fa;          /* Gris muy suave de fondo */
-    --kimi-white: #ffffff;        /* Blanco puro de tarjetas */
-    --kimi-sidebar: #f2f3f5;      /* Gris de la barra lateral */
-    --kimi-primary: #0066ff;      /* Azul vibrante de Kimi */
-    --kimi-primary-hover: #0052cc; /* Azul oscuro al pasar el mouse */
-    --kimi-text-main: #1a1d1f;    /* Texto casi negro */
-    --kimi-text-sub: #6f767e;     /* Texto gris secundario */
-    --kimi-border: #e6e8eb;       /* Bordes suaves */
-    --kimi-terminal-bg: #111315;  /* Fondo negro del monitor */
-    --kimi-terminal-text: #38bdf8; /* Texto cyan del monitor */
+    --hostal-naranja: #e67e22;    /* El naranja de tus botones */
+    --hostal-naranja-hover: #d35400;
+    --hostal-oscuro: #2c3e50;      /* El color de los textos principales */
+    --hostal-bg: #f8f9fa;         /* Fondo claro de la web */
+    --hostal-card-bg: #ffffff;
+    --hostal-border: #eee;
+    --hostal-texto: #555;
 }
 
-/* --- CONFIGURACIÓN GENERAL --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Inter', sans-serif; /* Tipografía oficial */
-    background-color: var(--kimi-bg);
-    color: var(--kimi-text-main);
-    overflow: hidden; /* Para el layout de panel */
-}
-
-/* --- LAYOUT ESTILO KIMI (ESPEJO) --- */
-.kimi-layout {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--hostal-bg);
+    color: var(--hostal-oscuro);
     display: flex;
-    height: 100vh;
-    width: 100vw;
-}
-
-/* Barra Lateral (Sidebar) */
-.sidebar {
-    width: 260px;
-    background-color: var(--kimi-sidebar);
-    border-right: 1px solid var(--kimi-border);
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-}
-
-.sidebar-header { margin-bottom: 40px; }
-.kimi-logo { font-size: 1.5rem; font-weight: 700; color: var(--kimi-text-main); letter-spacing: -1px; }
-.project-tag { font-size: 0.75rem; font-weight: 600; color: var(--kimi-primary); margin-top: -4px; }
-
-.sidebar-nav { display: flex; flex-direction: column; gap: 8px; flex-grow: 1; }
-
-.nav-item {
-    text-decoration: none;
-    color: var(--kimi-text-sub);
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 10px 12px;
-    border-radius: 8px;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
-    transition: all 0.2s;
+    min-height: 100vh;
 }
 
-.nav-item:hover { background-color: rgba(0,0,0,0.03); color: var(--kimi-text-main); }
-.nav-item.active { background-color: var(--kimi-white); color: var(--kimi-primary); box-shadow: 0 2px 4px rgba(0,0,0,0.02); font-weight: 600; }
-.nav-item.settings { margin-top: auto; } /* Al final */
-
-.divider { height: 1px; background-color: var(--kimi-border); margin: 16px 0; }
-
-.sidebar-footer {
-    border-top: 1px solid var(--kimi-border);
-    padding-top: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.user-avatar { width: 40px; height: 40px; background: var(--kimi-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
-.user-name { font-size: 0.85rem; font-weight: 600; }
-.user-status { font-size: 0.75rem; color: var(--kimi-text-sub); }
-
-/* Panel Principal (Main Panel) */
-.main-panel {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.panel-header {
-    background-color: var(--kimi-white);
-    padding: 24px 40px;
-    border-bottom: 1px solid var(--kimi-border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.panel-header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
-.panel-header p { color: var(--kimi-text-sub); font-size: 0.9rem; margin-top: 2px; }
-
-.server-status-badge {
-    background-color: var(--kimi-bg);
-    border: 1px solid var(--kimi-border);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.status-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981; }
-
-/* Contenido */
-.panel-content {
-    flex: 1;
+/* Contenedor tipo Tarjeta (Como se ve en tu sección "Sobre Nosotros") */
+.admin-card {
+    background: var(--hostal-card-bg);
+    width: 90%;
+    max-width: 500px;
     padding: 40px;
-    overflow-y: auto; /* Scroll aquí */
+    border-radius: 20px; /* Bordes redondeados como tus fotos */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid var(--hostal-border);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Logo o Título con el estilo de la web */
+.brand-title {
+    color: var(--hostal-oscuro);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-/* Tarjetas (Cards) */
-.card {
-    background-color: var(--kimi-white);
-    border-radius: 16px;
-    padding: 24px;
-    border: 1px solid var(--kimi-border);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+.status-text {
+    font-size: 14px;
+    color: var(--hostal-texto);
+    margin-bottom: 30px;
 }
 
-.card-header { margin-bottom: 24px; }
-.card-header h2 { font-size: 1.25rem; font-weight: 600; }
-.card-header p { color: var(--kimi-text-sub); font-size: 0.85rem; }
-
-/* Formularios (Kimi Form) */
-.kimi-form { display: flex; flex-direction: column; gap: 16px; }
-
-.input-field label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--kimi-text-sub);
-    margin-bottom: 6px;
-}
-
-.kimi-form input, .kimi-form select {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 12px;
-    border: 1px solid var(--kimi-border);
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: border-color 0.2s;
-}
-
-.kimi-form input:focus, .kimi-form select:focus {
-    border-color: var(--kimi-primary);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.08);
-}
-
-/* Botones (Kimi Buttons) */
-.kimi-btn-primary {
-    background-color: var(--kimi-primary);
+/* Botón NARANJA (Igual al de "Reservar Ahora" de tu foto) */
+.btn-hostal {
+    background-color: var(--hostal-naranja);
     color: white;
     border: none;
-    padding: 14px;
-    border-radius: 12px;
+    padding: 15px 30px;
+    border-radius: 8px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 8px;
+    transition: all 0.3s ease;
+    text-transform: none; /* Mantenerlo natural */
 }
 
-.kimi-btn-primary:hover { background-color: var(--kimi-primary-hover); }
-
-.kimi-btn-sm {
-    background: none;
-    border: 1px solid var(--kimi-border);
-    color: var(--kimi-text-sub);
-    padding: 4px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.7rem;
-    font-weight: 500;
+.btn-hostal:hover {
+    background-color: var(--hostal-naranja-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
 }
 
-.kimi-btn-sm:hover { border-color: var(--kimi-primary); color: var(--kimi-primary); }
-
-/* Monitor y Terminal (Estilo Kimi) */
-.side-panel { display: flex; flex-direction: column; gap: 24px; }
-
-.card-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
-.info-card h3 { font-size: 1rem; font-weight: 600; }
-.info-card p { font-size: 0.8rem; color: var(--kimi-text-sub); }
-
-.card-header-sm { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-.card-header-sm h3 { font-size: 0.9rem; font-weight: 600; color: var(--kimi-text-main); }
-
-.kimi-terminal {
-    background-color: var(--kimi-terminal-bg);
-    color: var(--kimi-terminal-text);
-    padding: 16px;
-    border-radius: 10px;
+/* Consola de datos estilo "JSON limpio" */
+#datos {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
     font-family: 'Courier New', monospace;
-    font-size: 0.8rem;
-    height: 120px;
-    overflow-y: auto;
+    font-size: 13px;
+    color: #444;
+    text-align: left;
+    white-space: pre-wrap;
+    display: none; /* Se muestra al cargar datos */
 }
 
-.kimi-blink { animation: blink 1s infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-
-/* Feedback */
-.feedback-msg { margin-top: 16px; font-size: 0.85rem; font-weight: 500; text-align: center; }
+.success-badge {
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+}
