@@ -3,73 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostal del Milagro | Experiencia Única</title>
+    <title>Kimi | Hostal del Milagro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo"><span>🏨</span> Hostal del Milagro</div>
-            <div class="nav-status">
-                <span class="status-dot"></span>
-                <span id="server-label">Servidor: Online</span>
+<body class="kimi-layout">
+    
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="kimi-logo">Kimi</div>
+            <div class="project-tag">Hostal Milagro</div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span class="icon">🏠</span> Inicio
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">📅</span> Reservas
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">👥</span> Huéspedes
+            </a>
+            <div class="divider"></div>
+            <a href="#" class="nav-item settings">
+                <span class="icon">⚙️</span> Configuración
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-avatar">CA</div>
+            <div class="user-info">
+                <div class="user-name">Cristian Albarracin</div>
+                <div class="user-status">Admin</div>
             </div>
         </div>
-    </nav>
+    </aside>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Un refugio de paz en el corazón de la ciudad.</h1>
-            <p>Descubre el Hostal del Milagro, una demo moderna diseñada para ofrecer confort, tecnología y una atención personalizada que redefine tu estadía.</p>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="grid-layout">
-            <section class="card reservation-card">
-                <h2>Reserva tu Estancia</h2>
-                <form id="reservaForm">
-                    <div class="input-group">
-                        <label>Nombre Completo</label>
-                        <input type="text" id="nombre" placeholder="Ej. Cristian Albarracin" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Fecha de Check-in</label>
-                        <input type="date" id="fecha" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Tipo de Suite</label>
-                        <select id="habitacion">
-                            <option value="Executive">Executive Minimalist</option>
-                            <option value="Panoramic">Panoramic View</option>
-                            <option value="Milagro">Milagro Diamond Suite</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-submit">Confirmar Reserva</button>
-                </form>
-                <div id="feedback" class="feedback-msg"></div>
-            </section>
-
-            <aside class="side-content">
-                <div class="card preview-card">
-                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Habitación" class="img-header">
-                    <div class="card-body">
-                        <h3>Nuestra mejor suite</h3>
-                        <p>Diseño escandinavo con tecnología inteligente integrada.</p>
-                    </div>
+    <main class="main-panel">
+        <header class="panel-header">
+            <div class="header-left">
+                <h1>Panel de Control</h1>
+                <p>Gestiona tu Hostal con la tecnología de Kimi.</p>
+            </div>
+            <div class="header-right">
+                <div class="server-status-badge">
+                    <span class="status-dot"></span>
+                    <span id="server-status-label">Render: Online</span>
                 </div>
+            </div>
+        </header>
 
-                <div class="card monitor-card">
-                    <div class="monitor-header">
-                        <h3>Monitor de Sistema</h3>
-                        <button id="btnCheck">Refrescar</button>
+        <div class="panel-content">
+            <div class="grid-container">
+                
+                <section class="card reservation-card">
+                    <div class="card-header">
+                        <h2>Nueva Reserva</h2>
+                        <p>Completa los datos para agendar.</p>
                     </div>
-                    <div id="console" class="terminal">
-                        <p class="blink">> Esperando instrucción...</p>
+                    
+                    <form id="reservaForm" class="kimi-form">
+                        <div class="input-field">
+                            <label>Nombre Completo</label>
+                            <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Fecha de Check-in</label>
+                            <input type="date" id="fecha" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Tipo de Suite</label>
+                            <select id="habitacion">
+                                <option value="Executive">Executive Minimalist</option>
+                                <option value="Panoramic">Panoramic View</option>
+                                <option value="Milagro">Milagro Diamond Suite</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="kimi-btn-primary">Confirmar Reserva</button>
+                    </form>
+                    <div id="feedback" class="feedback-msg"></div>
+                </section>
+
+                <aside class="side-panel">
+                    <div class="card info-card">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80" alt="Habitación" class="card-img">
+                        <div class="card-body">
+                            <h3>Suite Panoramic View</h3>
+                            <p>Vista de 180° a la ciudad.</p>
+                        </div>
                     </div>
-                </div>
-            </aside>
+
+                    <div class="card monitor-card">
+                        <div class="card-header-sm">
+                            <h3>Monitor de Sistema</h3>
+                            <button id="btnCheck" class="kimi-btn-sm">Refrescar</button>
+                        </div>
+                        <div id="console" class="kimi-terminal">
+                            <p class="kimi-blink">> Esperando instrucción...</p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
         </div>
     </main>
 
