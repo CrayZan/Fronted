@@ -1,90 +1,61 @@
-/* --- PALETA DE COLORES EXTRAÍDA DE TU WEB --- */
-:root {
-    --hostal-naranja: #e67e22;    /* El naranja de tus botones */
-    --hostal-naranja-hover: #d35400;
-    --hostal-oscuro: #2c3e50;      /* El color de los textos principales */
-    --hostal-bg: #f8f9fa;         /* Fondo claro de la web */
-    --hostal-card-bg: #ffffff;
-    --hostal-border: #eee;
-    --hostal-texto: #555;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--hostal-bg);
-    color: var(--hostal-oscuro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Contenedor tipo Tarjeta (Como se ve en tu sección "Sobre Nosotros") */
 .admin-card {
-    background: var(--hostal-card-bg);
-    width: 90%;
-    max-width: 500px;
+    background: white;
     padding: 40px;
-    border-radius: 20px; /* Bordes redondeados como tus fotos */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     text-align: center;
-    border: 1px solid var(--hostal-border);
+    width: 100%;
+    max-width: 450px;
 }
 
-/* Logo o Título con el estilo de la web */
-.brand-title {
-    color: var(--hostal-oscuro);
-    font-size: 28px;
-    font-weight: 700;
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
-.status-text {
+#estado {
     font-size: 14px;
-    color: var(--hostal-texto);
-    margin-bottom: 30px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
 }
 
-/* Botón NARANJA (Igual al de "Reservar Ahora" de tu foto) */
 .btn-hostal {
-    background-color: var(--hostal-naranja);
+    background-color: #e67e22; /* Tu naranja corporativo */
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 30px;
     border-radius: 8px;
-    font-weight: 600;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: none; /* Mantenerlo natural */
+    transition: background 0.3s;
 }
 
 .btn-hostal:hover {
-    background-color: var(--hostal-naranja-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+    background-color: #d35400;
 }
 
-/* Consola de datos estilo "JSON limpio" */
 #datos {
     margin-top: 25px;
-    padding: 20px;
-    background-color: #fcfcfc;
-    border: 1px solid #f0f0f0;
-    border-radius: 12px;
+    padding: 15px;
+    background-color: #f0fdf4; /* Fondo verde clarito como en tu captura exitosa */
+    border: 1px solid #dcfce7;
+    border-radius: 10px;
     font-family: 'Courier New', monospace;
     font-size: 13px;
-    color: #444;
+    color: #166534;
     text-align: left;
     white-space: pre-wrap;
-    display: none; /* Se muestra al cargar datos */
-}
-
-.success-badge {
-    color: #27ae60;
-    font-weight: 600;
-    margin-bottom: 15px;
-    display: block;
+    display: none; /* Oculto hasta que carguen los datos */
 }
