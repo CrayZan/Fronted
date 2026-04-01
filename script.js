@@ -1,5 +1,5 @@
 // Configuración de la conexión con Render
-const URL_DE_RENDER = "https://hostal-milagro.onrender.com";
+const URL_DE_RENDER = "https://hostal-milagro.onrender.com/datos";
 
 // Seleccionamos los elementos de la página
 const boton = document.getElementById('botonCargar');
