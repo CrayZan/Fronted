@@ -3,56 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostal del Milagro | Panel de Control</title>
+    <title>Hostal del Milagro | Experiencia Única</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">🏨 Hostal del Milagro</div>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Habitaciones</a></li>
-                <li><a href="#">Reservas</a></li>
-            </ul>
+            <div class="logo"><span>🏨</span> Hostal del Milagro</div>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span id="server-label">Servidor: Online</span>
+            </div>
         </div>
     </nav>
 
-    <main class="main-content">
-        <header class="header-section">
-            <h1>Panel de Administración</h1>
-            <p>Gestiona la información de tu servidor en tiempo real.</p>
-        </header>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Un refugio de paz en el corazón de la ciudad.</h1>
+            <p>Descubre el Hostal del Milagro, una demo moderna diseñada para ofrecer confort, tecnología y una atención personalizada que redefine tu estadía.</p>
+        </div>
+    </header>
 
-        <section class="admin-card">
-            <div class="card-header">
-                <span class="status-dot"></span>
-                <h2 id="estado">Estado: Listo para conectar</h2>
-            </div>
-            
-            <button id="botonCargar" class="btn-primary">
-                🔄 Actualizar Información
-            </button>
+    <main class="container">
+        <div class="grid-layout">
+            <section class="card reservation-card">
+                <h2>Reserva tu Estancia</h2>
+                <form id="reservaForm">
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ej. Cristian Albarracin" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Fecha de Check-in</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Tipo de Suite</label>
+                        <select id="habitacion">
+                            <option value="Executive">Executive Minimalist</option>
+                            <option value="Panoramic">Panoramic View</option>
+                            <option value="Milagro">Milagro Diamond Suite</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Confirmar Reserva</button>
+                </form>
+                <div id="feedback" class="feedback-msg"></div>
+            </section>
 
-            <div id="datos" class="data-display">
-                <p class="placeholder-text">Los datos aparecerán aquí...</p>
-            </div>
-        </section>
-
-        <section class="gallery-preview">
-            <h3>Vista Previa del Hostal</h3>
-            <div class="grid">
-                <div class="grid-item">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=300&q=80" alt="Hotel">
-                    <p>Fachada Principal</p>
+            <aside class="side-content">
+                <div class="card preview-card">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Habitación" class="img-header">
+                    <div class="card-body">
+                        <h3>Nuestra mejor suite</h3>
+                        <p>Diseño escandinavo con tecnología inteligente integrada.</p>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=300&q=80" alt="Habitación">
-                    <p>Habitación Doble</p>
+
+                <div class="card monitor-card">
+                    <div class="monitor-header">
+                        <h3>Monitor de Sistema</h3>
+                        <button id="btnCheck">Refrescar</button>
+                    </div>
+                    <div id="console" class="terminal">
+                        <p class="blink">> Esperando instrucción...</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </aside>
+        </div>
     </main>
 
     <script src="script.js"></script>
